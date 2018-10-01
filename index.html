@@ -45,18 +45,18 @@
     </nav>
     <!-- IMAGE CAROUSEL -->
     <div id='carouselImages' class='carousel slide' data-ride='carousel'>
-            <div class='carousel-inner'>
-              <div class='carousel-item active'>
+        <div class='carousel-inner'>
+            <div class='carousel-item active'>
                 <img class='d-block w-100 images' src='resources/images/cardiBSmile.jpg' alt='First slide' height='800'>
-              </div>
-              <div class='carousel-item'>
-                <img class='d-block w-100 images' src='resources/images/peanutSmile.jpg' alt='Second slide' height='800'>
-              </div>
-              <div class='carousel-item'>
-                <img class='d-block w-100 images' src='resources/images/seleneSmile.jpg' alt='Third slide' height='800'>
-              </div>
             </div>
-          </div>
+            <div class='carousel-item'>
+                <img class='d-block w-100 images' src='resources/images/peanutSmile.jpg' alt='Second slide' height='800'>
+            </div>
+            <div class='carousel-item'>
+                <img class='d-block w-100 images' src='resources/images/seleneSmile.jpg' alt='Third slide' height='800'>
+            </div>
+        </div>
+    </div>
     <!-- SHOWCASE -->
     <section id='showcase' class='py-5'>
         <div class='primary-overlay text-white'>
@@ -78,7 +78,7 @@
     </section>
 
     <!-- SEARCH BAR -->
-    <section id='search-bar' class=' text-white py-3'>
+    <section id='search-bar' class=' text-white py-3 mb-4'>
         <div class='container'>
             <div class='row'>
                 <div class='col-md-4'>
@@ -93,8 +93,139 @@
         </div>
     </section>
 
+    <div class='api-content'>
+        <aside class='content-boxes text-primary mb-4'>
+            <ul>
+                <li class='google-content'>Pet Stores</li>
+                <li class='google-content'>Pet Parks</li>
+                <li class='google-content'>Pet clinics</li>
+            </ul>
+        </aside>
+    </div>
 
+    <div class='google-api'></div>
 
+    <!-- ABOUT -->
+
+    <section id='about' class='py-5 text-center bg-light'>
+        <div class='container'>
+            <div class='row'>
+                <div class='col'>
+                    <div class='info-header mb-5'>
+                        <h1 class='text-primary pb-3'>
+                            Why This Page!
+                        </h1>
+                        <p class='lead pb-3'>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore minus doloremque quibusdam
+                            nostrum quaerat. Recusandae?
+                        </p>
+                    </div>
+
+                    <!-- ACCORDION -->
+                    <div id='accordion'>
+                        <div class='card'>
+                            <div class='card-header'>
+                                <h5 class='mb-0'>
+                                    <div href='#collapse1' data-toggle='collapse' data-parent='#accordion'>
+                                        <i class='fas fd-arrow-cicrle-down'></i> We Love Our Furry Friends!
+                                    </div>
+                                </h5>
+                            </div>
+                            <div id='collapse1' class='collapse show'>
+                                <div class='card-body'>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat illum sit numquam,
+                                    unde minus fugit molestiae saepe ipsa, consequatur cumque quia repellendus omnis
+                                    est placeat qui reiciendis veniam?
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class='card'>
+                            <div class='card-header'>
+                                <h5 class='mb-0'>
+                                    <div href='#collapse2' data-toggle='collapse' data-parent='#accordion'>
+                                        <i class='fas fd-arrow-cicrle-down'></i> Know Where You're Going!
+                                    </div>
+                                </h5>
+                            </div>
+                            <div id='collapse2' class='collapse'>
+                                <div class='card-body'>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat illum sit numquam,
+                                    unde minus fugit molestiae saepe ipsa, consequatur cumque quia repellendus omnis
+                                    est placeat qui reiciendis veniam?
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class='card'>
+                            <div class='card-header'>
+                                <h5 class='mb-0'>
+                                    <div href='#collapse3' data-toggle='collapse' data-parent='#accordion'>
+                                        <i class='fas fd-arrow-cicrle-down'></i> Find Your New Favorite Place!
+                                    </div>
+                                </h5>
+                            </div>
+                            <div id='collapse3' class='collapse'>
+                                <div class='card-body'>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat illum sit numquam,
+                                    unde minus fugit molestiae saepe ipsa, consequatur cumque quia repellendus omnis
+                                    est placeat qui reiciendis veniam?
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Review -->
+    <section id='footer' class='bg-light py-5'>
+        <div class='container'>
+            <div class='row'>
+                <div class='col-lg-9'>
+                    <h3>Leave a Review</h3>
+                    <form>
+                        <div class='input-group input-group-lg mb-3'>
+                            <div class='input-group-prepend'>
+                                <span class='input-group-text'>
+                                    <i class='fas fa-user'></i>
+                                </span>
+                            </div>
+                            <input type='text' class='form-control' placeholder='Name'>
+                        </div>
+
+                        <div class='input-group input-group-lg mb-3'>
+                            <div class='input-group-prepend'>
+                                <span class='input-group-text'>
+                                    <i class='fas fa-envelope'></i>
+                                </span>
+                            </div>
+                            <input type='text' class='form-control' placeholder='Email'>
+                        </div>
+
+                        <div class='input-group input-group-lg mb-3'>
+                            <div class='input-group-prepend'>
+                                <span class='input-group-text'>
+                                    <i class='fas fa-pencil-alt'></i>
+                                </span>
+                            </div>
+                            <textarea class='form-control' row='5' placeholder='Leave a Review'></textarea>
+                        </div>
+
+                        <input type='submit' value='Submit' class='btn btn-primary btn-block btn-lg'>
+                    </form>
+                </div>
+
+                <div class="col-lg-3 align-self-center">
+                    <a href='index.html' class='navbar-brand'>
+                        <i class='fas fa-paw paw-logo'></i>
+                        <h3 class='d-inline align-middle logo-text'>Pet Perfect</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 
