@@ -18,6 +18,11 @@ body {
   display: block;
   clear: both; }
 
+.info-header {
+  width: 50%;
+  margin: auto;
+  border-bottom: 1px #ddd solid; }
+
 .logo-text {
   font-family: 'Monoton', cursive;
   color: #800020; }
