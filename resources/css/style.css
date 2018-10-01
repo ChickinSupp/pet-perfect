@@ -1,5 +1,5 @@
 body {
-  margin-top: 89px; }
+  margin-top: 99px; }
 
 .navbar {
   box-shadow: 2px 2px 5px #800020;
@@ -9,9 +9,12 @@ body {
     font-size: 1.4rem;
     padding-right: 1.4rem; }
 
+.paw-logo {
+  color: #800020; }
+
 #showcase {
   position: absolute;
-  top: 5%; }
+  top: 15%; }
 
 #showcase:after {
   content: '';

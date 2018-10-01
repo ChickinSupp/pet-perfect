@@ -2,7 +2,7 @@ $primary: #800020;
 $primary-overlay: rgba(128,0,32,0.8);
 
 body{
-    margin-top: 89px;
+    margin-top: 99px;
 }
 
 .navbar{
@@ -17,9 +17,13 @@ body{
     }
 }
 
+.paw-logo{
+    color: #800020;
+}
+
 #showcase{
     position: absolute;
-    top: 5%;
+    top: 15%;
 }
 
 #showcase:after{
@@ -42,11 +46,6 @@ body{
 #search-bar{
     color: #800020;
 }
-
-
-
-
-
 
 @media(max-width: 1850px){
     .images{
