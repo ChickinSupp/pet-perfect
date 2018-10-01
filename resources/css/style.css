@@ -1,0 +1,43 @@
+body {
+  margin-top: 89px; }
+
+.navbar {
+  box-shadow: 2px 2px 5px #800020;
+  opacity: 0.9;
+  background: #fff; }
+  .navbar .nav-item {
+    font-size: 1.4rem;
+    padding-right: 1.4rem; }
+
+#showcase {
+  position: absolute;
+  top: 5%; }
+
+#showcase:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.logo-text {
+  font-family: 'Monoton', cursive;
+  color: #800020; }
+
+#search-bar {
+  color: #800020; }
+
+@media (max-width: 1850px) {
+  .images {
+    max-height: 1200px; } }
+@media (max-width: 768px) {
+  #showcase {
+    min-height: 500px;
+    position: absolute;
+    top: 20%; }
+    #showcase h1 {
+      font-size: 4rem; }
+
+  .mb-resp {
+    margin-bottom: 1rem; }
+
+  .images {
+    max-height: 800px; } }
