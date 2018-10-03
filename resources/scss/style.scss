@@ -1,0 +1,71 @@
+$primary: #800020;
+$primary-overlay: rgba(128,0,32,0.8);
+
+body{
+    margin-top: 99px;
+}
+
+.navbar{
+    box-shadow: 2px 2px 5px $primary;
+    opacity: 0.9;
+    background: #fff;
+
+    .nav-item{
+        font-size: 1.4rem;
+        padding-right: 1.4rem;
+    
+    }
+}
+
+.paw-logo{
+    color: #800020;
+}
+
+#showcase{
+    position: absolute;
+    top: 15%;
+}
+
+#showcase:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.info-header{
+    width: 50%;
+    margin: auto;
+    border-bottom: 1px #ddd solid;
+}
+
+.logo-text{
+    font-family: 'Monoton', cursive;
+    color: #800020;
+}
+
+#search-bar{
+    color: #800020;
+}
+
+@media(max-width: 1850px){
+    .images{
+        max-height: 1200px;
+    }
+}
+
+@media(max-width: 768px){
+    #showcase{
+        min-height: 500px;
+        position: absolute;
+        top: 20%;
+        h1{
+            font-size: 4rem;
+        }
+    }
+    .mb-resp{
+        margin-bottom: 1rem;
+    }
+    .images{
+        max-height: 800px;
+    }
+}
