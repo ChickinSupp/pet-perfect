@@ -49,3 +49,5 @@ body {
 
   .images {
     max-height: 800px; } }
+
+#firebaseui-auth-container {display: none;}

@@ -183,7 +183,7 @@
     <section id='review' class='bg-light py-5'>
         <div class='container'>
             <div class='row'>
-                <div class='col-lg-9'>
+                <div class='col-lg-9 review-form'>
                     <h3>Leave a Review</h3>
                     <form>
                         <div class='input-group input-group-lg mb-3'>
@@ -213,9 +213,11 @@
                             <textarea class='form-control' rows='5' placeholder='Leave a Review'></textarea>
                         </div>
 
-                        <input type='submit' value='Submit' class='btn btn-primary btn-block btn-lg'>
+                        <input type='submit' value='Submit' id="submit" class='btn btn-primary btn-block btn-lg'>
                     </form>
                 </div>
+
+                <div class='col-lg-9' id="firebaseui-auth-container"></div>
 
                 <div class='col-lg-3 align-self-center'>
                     <a href='index.html' class='navbar-brand'>
