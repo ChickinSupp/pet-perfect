@@ -24,7 +24,7 @@
  // Initialize Firebase
  var mykey = myStuff.API_KEY;
  let config = {
-     apiKey: mykey,
+     apiKey:mykey,
      authDomain: "project-one-1d7a0.firebaseapp.com",
      databaseURL: "https://project-one-1d7a0.firebaseio.com",
      projectId: "project-one-1d7a0",
@@ -33,41 +33,99 @@
  };
 
  firebase.initializeApp(config);
+ var db = firebase.firestore();
+ db.settings({timestampsInSnapshots: true});
 
- // FirebaseUI config.
- let uiConfig = {
-     signInSuccessUrl: 'index.html',
-     signInOptions: [
-         // Leave the lines as is for the providers you want to offer your users.
-         firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-         firebase.auth.EmailAuthProvider.PROVIDER_ID
-     ],
-     // tosUrl and privacyPolicyUrl accept either url string or a callback
-     // function.
-     // Terms of service url/callback.
-     tosUrl: '<your-tos-url>',
-     // Privacy policy url/callback.
-     privacyPolicyUrl: function() {
-         window.location.assign('<your-privacy-policy-url>');
-     }
- };
+ let user = firebase.auth().currentUser;
+ let name, email, photoUrl, uid, emailVerified;
 
- // Initialize the FirebaseUI Widget using Firebase.
- let ui = new firebaseui.auth.AuthUI(firebase.auth());
+ // tracks if user is logged in
+ let isIn = false;
+
+ if (user != null) {
+     name = user.displayName;
+     email = user.email;
+     photoUrl = user.photoURL;
+     emailVerified = user.emailVerified;
+     uid = user.uid;
+ }
 
 
  $(document).ready(function () {
-    $('#submit').on('click', function () {
-        $('.review-form').css('display', 'none');
-        $('#firebaseui-auth-container').css('display', 'block');
-        ui.start('#firebaseui-auth-container', uiConfig);
+
+     $('#uilogin').on('click', function () {
+
+         if (!isIn) {
+             location.href = "login.html";
+         } else {
+             firebase.auth().signOut().then(function() {
+                 // Sign-out successful.
+             }).catch(function(error) {
+                 // An error happened.
+             });
+         }
+     });
+
+     $('#submit').on('click', function () {
+         // Prevent form from submitting
+         event.preventDefault();
+         alert('HERE!');
+         addReview();
+     });
+ });
+
+ // Tracks the user's login state and updates the DOM
+ firebase.auth().onAuthStateChanged(function(user) {
+     if (user) {
+         console.log('user signed in');
+         $('#uilogin').text("Logout");
+         $('#fav').css('display', 'block');
+         $('.review-form').css('display', 'block');
+         isIn = true;
+     } else {
+         console.log('no user signed in');
+         $('#uilogin').text("Login");
+         $('#fav').css('display', 'none');
+         isIn = false;
+     }
+ });
+
+ //______Render Reviews From Database____//
+ // Get a reference to the database service
+ let reviews = db.collection('reviews');
+
+ reviews.get().then((snapshot) => {
+    snapshot.docs.forEach(doc => {
+        console.log(doc.data());
+        renderReviews(doc);
     })
  });
 
- firebase.auth().onAuthStateChanged(function(user) {
-     if (user) {
-        alert('Your review has been submitted');
-     } else {
-         console.log('no user signed in');
+ function addReview() {
+     let comment = $('#comment').val().trim();
+     console.log(comment);
+     if (!(comment === '')) {
+         reviews.doc().set({
+             name: name,
+             comment: comment
+         });
      }
- });
+ }
+
+ function renderReviews(doc) {
+     // Using vue js to render reviews
+     var app = new Vue({
+         el: '#app',
+         data: {
+             todos: []
+         }
+     });
+
+     let review = doc.data().comment;
+     app.todos.push({ text: review });
+ }
+
+
+
+
+
