@@ -42,6 +42,7 @@ $(document).ready(function () {
             }).catch(function(error) {
                 // An error happened.
             });
+            location.reload();
         }
     });
 
@@ -103,3 +104,4 @@ function renderReviews(doc) {
     let review = doc.data().comment;
     app.todos.push({ text: review });
 }
+
