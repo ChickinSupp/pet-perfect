@@ -91,15 +91,15 @@ function addReview() {
     }
 }
 
-function renderReviews(doc) {
-    // Using vue js to render reviews
-    var app = new Vue({
-        el: '#app',
-        data: {
-            todos: []
-        }
-    });
+// Using vue js to render reviews
+var app = new Vue({
+    el: '#app',
+    data: {
+        todos: []
+    }
+});
 
+function renderReviews(doc) {
     let review = doc.data().comment;
     app.todos.push({ text: review });
 }
