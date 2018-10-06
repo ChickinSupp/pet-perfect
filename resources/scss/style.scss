@@ -5,6 +5,7 @@ body{
     margin-top: 6rem;
 }
 
+// navigation
 .navbar{
     box-shadow: 2px 2px 5px $primary;
     opacity: 0.9;
@@ -21,6 +22,7 @@ body{
     color: #800020;
 }
 
+// slogan container
 #showcase{
     position: absolute;
     top: 15%;
@@ -45,17 +47,11 @@ body{
 }
 
 .carousel-inner{
-    height: calc(100vh - 6rem);
+    height: calc(100vh - 6rem) !important;
 }
 
 #search-bar{
     color: #800020;
-}
-
-@media(max-width: 1850px){
-    .images{
-        max-height: 1200px;
-    }
 }
 
 @media(max-width: 768px){
