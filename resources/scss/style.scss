@@ -2,7 +2,7 @@ $primary: #800020;
 $primary-overlay: rgba(128,0,32,0.8);
 
 body{
-    margin-top: 99px;
+    margin-top: 6rem;
 }
 
 .navbar{
@@ -24,6 +24,7 @@ body{
 #showcase{
     position: absolute;
     top: 15%;
+    left: 50%;
 }
 
 #showcase:after{
@@ -41,6 +42,10 @@ body{
 .logo-text{
     font-family: 'Monoton', cursive;
     color: #800020;
+}
+
+.carousel-inner{
+    height: calc(100vh - 6rem);
 }
 
 #search-bar{
