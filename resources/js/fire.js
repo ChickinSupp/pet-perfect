@@ -96,12 +96,13 @@ function addReview() {
 var app = new Vue({
     el: '#app',
     data: {
-        todos: []
+        reviews: []
     }
 });
 
 function renderReviews(doc) {
     let review = doc.data().comment;
-    app.todos.push({ text: review });
+    let username = doc.data().username;
+    app.reviews.push({ key: username, value: review });
 }
 

@@ -196,7 +196,7 @@
                     <h4 class="center">User Reviews</h4>
                     <div class="card" id="app">
                         <ul class="list-group list-group-flush">
-                            <li id="reviews" class="list-group-item" v-for="todo in todos">"{{ todo.text }}"</li>
+                            <li id="reviews" class="list-group-item" v-for="review in reviews">{{ review.key }}:<br> "{{ review.value }}"</li>
                         </ul>
                     </div>
                 </div>
