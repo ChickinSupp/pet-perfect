@@ -196,7 +196,7 @@
                     <h4 class="center">User Reviews</h4>
                     <div class="card" id="app">
                         <ul class="list-group list-group-flush">
-                            <li id="reviews" class="list-group-item" v-for="review in reviews">{{ review.key }}:<br> "{{ review.value }}"</li>
+                            <li id="reviews" class="list-group-item" v-for="review in reviews"><span id="key">{{ review.key }}:</span><br><span id="value">"{{ review.value }}"</span> </li>
                         </ul>
                     </div>
                 </div>
@@ -205,7 +205,7 @@
             <div class='row'>
                 <div class='col-lg-9 review-form'>
                     <h3>Leave a Review</h3>
-                    <form>
+                    <form id="myForm">
                         <div class='input-group input-group-lg mb-3'>
                             <div class='input-group-prepend'>
                                 <span class='input-group-text'>

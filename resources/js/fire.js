@@ -49,7 +49,6 @@ $(document).ready(function () {
     $('#submit').on('click', function () {
         // Prevent form from submitting
         event.preventDefault();
-        alert('HERE!');
         addReview();
     });
 });
@@ -74,21 +73,31 @@ firebase.auth().onAuthStateChanged(function(user) {
 // Get a reference to the database service
 let reviews = db.collection('reviews');
 
-reviews.get().then((snapshot) => {
-    snapshot.docs.forEach(doc => {
-        console.log(doc.data());
-        renderReviews(doc);
+// Get realtime updates
+reviews.onSnapshot(snapshot => {
+    let changes = snapshot.docChanges();
+    changes.forEach(change => {
+        if (change.type === 'added') {
+            renderReviews(change.doc);
+        }
     })
 });
 
 function addReview() {
     let comment = $('#comment').val().trim();
-    console.log(comment);
-    if (!(comment === '')) {
+    let username = $('#name').val().trim();
+
+    if ((comment !== '') && (username !== '')) {
         reviews.doc().set({
-            name: name,
+            username: username,
             comment: comment
-        });
+        }).then(function() {
+            console.log("Document successfully written!");
+            $("#myForm")[0].reset();
+        })
+            .catch(function(error) {
+                console.error("Error writing document: ", error);
+            });
     }
 }
 
