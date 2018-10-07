@@ -1,8 +1,9 @@
-body {
+html, body {
   margin-top: 99px;
   /* Sticky Footer */
   display: flex;
   min-height: 90vh;
+  height: 100%;
   flex-direction: column;}
 
 .center {
@@ -88,3 +89,33 @@ body {
 #value {
   font-style: italic;
 }
+
+.wrapper {
+  margin-left: 20px;
+}
+
+.jumbotron {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+#tips {
+  padding: 15px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  background-color: white;
+  color: black;
+}
+
+#animals {
+  margin: 10px;
+}
+
+#kitty {
+  max-height: 250px;
+}
+
+#list {
+  padding: 10px;
+}
+
