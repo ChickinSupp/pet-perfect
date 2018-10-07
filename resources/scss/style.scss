@@ -24,8 +24,7 @@ body{
 // slogan container
 #showcase{
     position: absolute;
-    top: 15%;
-    left: 50%;
+    top: 5rem;
 }
 
 #showcase:after{
@@ -53,7 +52,12 @@ body{
     color: #800020;
 }
 
-
+// @media screen and (max-width: 1300px){
+//     #showcase{
+//         position: absolute;
+//         left: 20rem;
+//     }
+// }
 
 @media(max-width: 768px){
     #showcase{
