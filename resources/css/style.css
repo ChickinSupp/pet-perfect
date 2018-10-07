@@ -1,5 +1,5 @@
 body {
-  margin-top: 99px;
+  margin-top: 6rem;
   /* Sticky Footer */
   display: flex;
   min-height: 90vh;
@@ -31,18 +31,51 @@ body {
   display: block;
   clear: both; }
 
+/* CAROUSEL IMAGEs */
+  .carousel-inner{
+    height: calc(100vh - 6rem);
+  }
+
+/* information header for why this page drop downs */
 .info-header {
   width: 50%;
   margin: auto;
-  border-bottom: 1px #ddd solid; }
+  border-bottom: 1px #800020 solid; }
 
 .logo-text {
   font-family: 'Monoton', cursive;
   color: #800020; }
-
+/* search bar and submit btns */
 #search-bar {
   color: #800020; }
 
+
+  /* Sticky Footer */ */
+  .wrapper {
+    flex: 1;
+  }
+  
+  #fav {
+     display: none;
+   }
+  
+  .review-form {
+    display: none;
+  }
+  
+  #app {
+    margin-bottom: 50px;
+  }
+  
+  #key {
+    font-weight: bold;
+  }
+  
+  #value {
+    font-style: italic;
+  }
+
+/* media queries */
 @media (max-width: 768px) {
   #showcase {
     min-height: 500px;
@@ -61,29 +94,4 @@ body {
 .login {
   padding-top: 50px;
   padding-bottom: 50px;
-}
-
-/* Sticky Footer */
-.wrapper {
-  flex: 1;
-}
-
-#fav {
-   display: none;
- }
-
-.review-form {
-  display: none;
-}
-
-#app {
-  margin-bottom: 50px;
-}
-
-#key {
-  font-weight: bold;
-}
-
-#value {
-  font-style: italic;
 }
