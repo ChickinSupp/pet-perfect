@@ -1,5 +1,13 @@
 body {
-  margin-top: 99px; }
+  margin-top: 99px;
+  /* Sticky Footer */
+  display: flex;
+  min-height: 90vh;
+  flex-direction: column;}
+
+.center {
+  text-align: center;
+}
 
 .navbar {
   box-shadow: 2px 2px 5px #800020;
@@ -49,3 +57,34 @@ body {
 
   .images {
     max-height: 800px; } }
+
+
+.login {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* Sticky Footer */
+.wrapper {
+  flex: 1;
+}
+
+#fav {
+   display: none;
+ }
+
+.review-form {
+  display: none;
+}
+
+#app {
+  margin-bottom: 50px;
+}
+
+#key {
+  font-weight: bold;
+}
+
+#value {
+  font-style: italic;
+}
