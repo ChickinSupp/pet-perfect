@@ -1,6 +1,19 @@
 body {
+<<<<<<< HEAD
   margin-top: 6rem; }
+=======
+  margin-top: 99px;
+  /* Sticky Footer */
+  display: flex;
+  min-height: 90vh;
+  flex-direction: column;}
+>>>>>>> 29c7faaa73f534956242eab8b381c436c2beb194
 
+.center {
+  text-align: center;
+}
+
+/* NAVIGATION */
 .navbar {
   box-shadow: 2px 2px 5px #800020;
   opacity: 0.9;
@@ -12,6 +25,7 @@ body {
 .paw-logo {
   color: #800020; }
 
+/* SLOGAN DISPLAY */
 #showcase {
   position: absolute;
   top: 5rem; }
@@ -49,3 +63,34 @@ body {
 
   .images {
     max-height: 800px; } }
+
+
+.login {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* Sticky Footer */
+.wrapper {
+  flex: 1;
+}
+
+#fav {
+   display: none;
+ }
+
+.review-form {
+  display: none;
+}
+
+#app {
+  margin-bottom: 50px;
+}
+
+#key {
+  font-weight: bold;
+}
+
+#value {
+  font-style: italic;
+}
