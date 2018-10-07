@@ -1,13 +1,5 @@
 body {
-<<<<<<< HEAD
   margin-top: 6rem; }
-=======
-  margin-top: 99px;
-  /* Sticky Footer */
-  display: flex;
-  min-height: 90vh;
-  flex-direction: column;}
->>>>>>> 29c7faaa73f534956242eab8b381c436c2beb194
 
 .center {
   text-align: center;
