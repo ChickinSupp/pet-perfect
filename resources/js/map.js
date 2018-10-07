@@ -1,6 +1,6 @@
 let map;
 const address = [];
-const apiKey = "my_API_KEY";
+const apiKey = "AIzaSyDEewIlfcIcurMzXVtLW1QTqvCp19nhuLA";
 
 const placeIDs = [];
 let isPlaceComp = false;
@@ -11,12 +11,17 @@ const getAddress = () => {
     address.push(userAdd);
 }
 
+$(function() {
+    $('#google-maps').removeAttr('style');
+});
+
 $('#submit-map').on('click', function () {
     getAddress();
 
     let userAddress = address.join();
     let coords;
     let queryUrl =`https://maps.googleapis.com/maps/api/geocode/json?address=${userAddress}&key=${apiKey}`;
+
     $.ajax({
         url: queryUrl,
         method: 'GET'
@@ -32,7 +37,7 @@ $('#submit-map').on('click', function () {
 });
 
 const initMap = (coords) => {
-    map = new google.maps.Map(document.getElementById('maps'), {
+    map = new google.maps.Map(document.getElementById('google-maps'), {
         center: coords,
         zoom: 11
     });
