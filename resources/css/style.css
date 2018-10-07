@@ -1,21 +1,11 @@
 body {
-<<<<<<< HEAD
-  margin-top: 6rem; }
-=======
-<<<<<<< HEAD
   margin-top: 6rem;
-=======
-<<<<<<< HEAD
-  margin-top: 6rem; }
-=======
-  margin-top: 99px;
->>>>>>> 69e1576fa6d2c46b674c5b4597bff43177c24b13
+  margin-top: 6rem;
   /* Sticky Footer */
   display: flex;
   min-height: 90vh;
-  flex-direction: column;}
->>>>>>> 29c7faaa73f534956242eab8b381c436c2beb194
->>>>>>> a3597768fec289cdb8bf4af3121930b433059c56
+  flex-direction: column;
+}
 
 .center {
   text-align: center;
@@ -48,7 +38,15 @@ body {
     height: calc(100vh - 6rem);
   }
 
-/* information header for why this page drop downs */
+/* google api */
+#google-maps{
+    width: 450px;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* information header for 'why this page' drop downs */
 .info-header {
   width: 50%;
   margin: auto;
@@ -57,9 +55,7 @@ body {
 .logo-text {
   font-family: 'Monoton', cursive;
   color: #800020; }
-<<<<<<< HEAD
 /* search bar and submit btns */
-=======
 
 .carousel-inner {
   height: calc(100vh - 6rem); }
