@@ -1,15 +1,17 @@
-html, body {
-  margin-top: 99px;
+body {
+  margin-top: 6rem;
+  margin-top: 6rem;
   /* Sticky Footer */
   display: flex;
   min-height: 90vh;
-  height: 100%;
-  flex-direction: column;}
+  flex-direction: column;
+}
 
 .center {
   text-align: center;
 }
 
+/* NAVIGATION */
 .navbar {
   box-shadow: 2px 2px 5px #800020;
   opacity: 0.9;
@@ -21,30 +23,73 @@ html, body {
 .paw-logo {
   color: #800020; }
 
+/* SLOGAN DISPLAY */
 #showcase {
   position: absolute;
-  top: 15%; }
+  top: 5rem; }
 
 #showcase:after {
   content: '';
   display: block;
   clear: both; }
 
+/* CAROUSEL IMAGEs */
+  .carousel-inner{
+    height: calc(100vh - 6rem);
+  }
+
+/* google api */
+#google-maps{
+    width: 450px;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* information header for 'why this page' drop downs */
 .info-header {
   width: 50%;
   margin: auto;
-  border-bottom: 1px #ddd solid; }
+  border-bottom: 1px #800020 solid; }
 
 .logo-text {
   font-family: 'Monoton', cursive;
   color: #800020; }
+/* search bar and submit btns */
+
+.carousel-inner {
+  height: calc(100vh - 6rem); }
 
 #search-bar {
   color: #800020; }
 
-@media (max-width: 1850px) {
-  .images {
-    max-height: 1200px; } }
+
+  /* Sticky Footer */ */
+  .wrapper {
+    flex: 1;
+  }
+  
+  #fav {
+     display: none;
+   }
+  
+  .review-form {
+    display: none;
+  }
+  
+  #app {
+    margin-bottom: 50px;
+  }
+  
+  #key {
+    font-weight: bold;
+  }
+  
+  #value {
+    font-style: italic;
+  }
+
+/* media queries */
 @media (max-width: 768px) {
   #showcase {
     min-height: 500px;
@@ -127,3 +172,4 @@ html, body {
   border: 2px solid #c69500;
   border-radius: 10px;
 }
+

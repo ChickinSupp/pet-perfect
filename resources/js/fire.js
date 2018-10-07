@@ -10,9 +10,8 @@ let config = {
     storageBucket: "project-one-1d7a0.appspot.com",
     messagingSenderId: "483583667725"
 };
-
 firebase.initializeApp(config);
-var db = firebase.firestore();
+let db = firebase.firestore();
 db.settings({timestampsInSnapshots: true});
 
 let user = firebase.auth().currentUser;
