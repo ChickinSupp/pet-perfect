@@ -1,5 +1,5 @@
 body {
-  margin-top: 99px; }
+  margin-top: 6rem; }
 
 .navbar {
   box-shadow: 2px 2px 5px #800020;
@@ -14,7 +14,7 @@ body {
 
 #showcase {
   position: absolute;
-  top: 15%; }
+  top: 5rem; }
 
 #showcase:after {
   content: '';
@@ -30,12 +30,12 @@ body {
   font-family: 'Monoton', cursive;
   color: #800020; }
 
+.carousel-inner {
+  height: calc(100vh - 6rem); }
+
 #search-bar {
   color: #800020; }
 
-@media (max-width: 1850px) {
-  .images {
-    max-height: 1200px; } }
 @media (max-width: 768px) {
   #showcase {
     min-height: 500px;
