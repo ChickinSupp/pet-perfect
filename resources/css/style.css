@@ -117,5 +117,13 @@ html, body {
 
 #list {
   padding: 10px;
+  display: -webkit-flex;
+  -webkit-justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
+#petImg {
+  border: 2px solid #c69500;
+  border-radius: 10px;
+}
