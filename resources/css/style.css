@@ -60,7 +60,6 @@ body {
 .carousel-inner {
   height: calc(100vh - 6rem); }
 
->>>>>>> 69e1576fa6d2c46b674c5b4597bff43177c24b13
 #search-bar {
   color: #800020; }
 
@@ -110,3 +109,67 @@ body {
   padding-top: 50px;
   padding-bottom: 50px;
 }
+
+/* Sticky Footer */
+.wrapper {
+  flex: 1;
+}
+
+#fav {
+   display: none;
+ }
+
+.review-form {
+  display: none;
+}
+
+#app {
+  margin-bottom: 50px;
+}
+
+#key {
+  font-weight: bold;
+}
+
+#value {
+  font-style: italic;
+}
+
+.wrapper {
+  margin-left: 20px;
+}
+
+.jumbotron {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+#tips {
+  padding: 15px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  background-color: white;
+  color: black;
+}
+
+#animals {
+  margin: 10px;
+}
+
+#kitty {
+  max-height: 250px;
+}
+
+#list {
+  padding: 10px;
+  display: -webkit-flex;
+  -webkit-justify-content: center;
+  display: flex;
+  justify-content: center;
+}
+
+#petImg {
+  border: 2px solid #c69500;
+  border-radius: 10px;
+}
+
