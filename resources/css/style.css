@@ -9,6 +9,7 @@ body {
   text-align: center;
 }
 
+/* NAVIGATION */
 .navbar {
   box-shadow: 2px 2px 5px #800020;
   opacity: 0.9;
@@ -20,6 +21,7 @@ body {
 .paw-logo {
   color: #800020; }
 
+/* SLOGAN DISPLAY */
 #showcase {
   position: absolute;
   top: 15%; }
@@ -41,9 +43,6 @@ body {
 #search-bar {
   color: #800020; }
 
-@media (max-width: 1850px) {
-  .images {
-    max-height: 1200px; } }
 @media (max-width: 768px) {
   #showcase {
     min-height: 500px;

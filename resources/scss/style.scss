@@ -5,6 +5,9 @@ body{
     margin-top: 6rem;
 }
 
+.paw-logo{
+    color: #800020;
+
 // navigation
 .navbar{
     box-shadow: 2px 2px 5px $primary;
@@ -16,10 +19,6 @@ body{
         padding-right: 1.4rem;
     
     }
-}
-
-.paw-logo{
-    color: #800020;
 }
 
 // slogan container
@@ -53,6 +52,8 @@ body{
 #search-bar{
     color: #800020;
 }
+
+
 
 @media(max-width: 768px){
     #showcase{
