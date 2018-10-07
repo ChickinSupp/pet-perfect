@@ -42,6 +42,9 @@
                 </ul>
             </div>
         </div>
+        <a href='#' id='uilogin' class='btn btn-outline-primary btn-lg'>
+            <i class='fas fa-arrow-right'></i> Login
+        </a>
     </nav>
     <!-- IMAGE CAROUSEL -->
     <div class='carousel slide' data-ride='carousel'>
@@ -67,12 +70,8 @@
                         <h1 class='display-2'>
                             For The Perfect Pet Owner
                         </h1>
-                        <p class='lead'> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit, corrupti.</p>
                         <a href='#' class='btn btn-outline-primary btn-lg text-white mt-3'>
                             <i class='fas fa-arrow-right'></i> Read More
-                        </a>
-                        <a href='#' id='uilogin' class='btn btn-outline-primary btn-lg text-white mt-3'>
-                            <i class='fas fa-arrow-right'></i> Login
                         </a>
                     </div>
                 </div>
@@ -84,58 +83,130 @@
     <section class=' text-white py-3 mb-4'>
         <div class='container'>
             <div class='row'>
-                <div class='col-md-4'>
-                    <input id='user-address' type='text' class='form-control form-control-lg mb-resp' placeholder='Enter Address, City, or Zip code'>
+                <div class='col-md-2'>
+                    <div class="dropdown ">
+                        <button class="btn btn-primary dropdown-toggle form-control form-control-lg mb-resp" type="button"
+                            id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Genre
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <button class="dropdown-item" type="button" data-toggle="dropdown">Pet Clinics</button>
+                            <button class="dropdown-item" type="button" data-toggle="dropdown">Pet Stores</button>
+                            <button class="dropdown-item" type="button" data-toggle="dropdown">Pet Parks</button>
+                        </div>
+                    </div>
                 </div>
-                <div class='col-md-4'>
+                <div class='col-md-5'>
+                    <input id='user-address' type='text' class='form-control form-control-lg mb-resp' placeholder='Enter Address, City, or Zip Code'>
+                </div>
+                <div class='col-md-5'>
                     <button id='submit-map' class='btn btn-primary btn-lg btn-block'>
                         <i class='fas fa envelope-open o'></i> Submit
                     </button>
                 </div>
-                <div class='col-md-4'>
+                <!-- <div class='col-md-3'>
                     <button id='fav' class='btn btn-primary btn-lg btn-block'>
                         <i class='fas fa envelope-open o'></i> Favorite
                     </button>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
 
     <!-- API CONTENT -->
-    <div class='container api-content'>
-        <div class="row">
-            <aside class='content-boxes text-primary mb-4'>
-                <ul>
-                    <li class='google-content'>Pet Stores</li>
-                    <li class='google-content'>Pet Parks</li>
-                    <li class='google-content'>Pet clinics</li>
-                </ul>
-            </aside>
-        </div>
-    </div>
+
     <!-- Google map -->
     <section id='map'>
-        <div class="container">
             <div class="row">
-                <div class='col-lg-6 text-center'>
+                <div class='col-lg-5 text-center'>
                     <div id='google-map'>
-                            <iframe
-                            width="600"
-                            height="450"
-                            frameborder="0" style="border:0"
-                            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDEewIlfcIcurMzXVtLW1QTqvCp19nhuLA
-                              &q=Atlanta+GA" allowfullscreen>
-                           </iframe>
+                        <iframe class='ml-4' width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDEewIlfcIcurMzXVtLW1QTqvCp19nhuLA
+                              &q=Atlanta+GA"
+                            allowfullscreen>
+                        </iframe>
                     </div>
+                    <!-- ACCORDION -->
+                    <div id='accordion'>
+                        <div class='card'>
+                            <div class='card-header'>
+                                <h5 class='mb-0'>
+                                    <div href='#collapse1' data-toggle='collapse' data-parent='#accordion'>
+                                        <i class='fas fa-arrow-circle-down'></i> Pet Clinics
+                                    </div>
+                                </h5>
+                            </div>
+                            <div id='collapse1' class='collapse show'>
+                                <div class='card-body'>
+                                    1. <br>
+                                    2. <br>
+                                    3. <br>
+                                    4. <br>
+                                    5. <br>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class='card'>
+                            <div class='card-header'>
+                                <h5 class='mb-0'>
+                                    <div href='#collapse2' data-toggle='collapse' data-parent='#accordion'>
+                                        <i class='fas fd-arrow-cicrle-down'></i> Pet Stores
+                                    </div>
+                                </h5>
+                            </div>
+                            <div id='collapse2' class='collapse'>
+                                <div class='card-body'>
+                                    1. <br>
+                                    2. <br>
+                                    3. <br>
+                                    4. <br>
+                                    5. <br>
+                                    1. <br>
+                                    2. <br>
+                                    3. <br>
+                                    4. <br>
+                                    5. <br>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class='card'>
+                            <div class='card-header'>
+                                <h5 class='mb-0'>
+                                    <div href='#collapse3' data-toggle='collapse' data-parent='#accordion'>
+                                        <i class='fas fd-arrow-cicrle-down'></i> Pet Parks
+                                    </div>
+                                </h5>
+                            </div>
+                            <div id='collapse3' class='collapse'>
+                                <div class='card-body'>
+                                    1. <br>
+                                    2. <br>
+                                    3. <br>
+                                    4. <br>
+                                    5. <br>
+                                    1. <br>
+                                    2. <br>
+                                    3. <br>
+                                    4. <br>
+                                    5. <br>
+                                    1. <br>
+                                    2. <br>
+                                    3. <br>
+                                    4. <br>
+                                    5. <br>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
                 </div>
             </div>
-        </div>
     </section>
 
 
 
     <!-- ABOUT -->
-    <section id='about' class='py-5 text-center bg-light'>
+    <section class='py-5 text-center bg-light'>
         <div class='container'>
             <div class='row'>
                 <div class='col'>
@@ -155,7 +226,7 @@
                             <div class='card-header'>
                                 <h5 class='mb-0'>
                                     <div href='#collapse1' data-toggle='collapse' data-parent='#accordion'>
-                                        <i class='fas fd-arrow-cicrle-down'></i> We Love Our Furry Friends!
+                                        <i class='fas fa-arrow-circle-down'></i> We Love Our Furry Friends!
                                     </div>
                                 </h5>
                             </div>
