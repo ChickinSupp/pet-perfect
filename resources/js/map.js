@@ -1,5 +1,5 @@
 const address = [];
-const apiKey = "AIzaSyDEewIlfcIcurMzXVtLW1QTqvCp19nhuLA";
+const apiKey = "enter key";
 const placeIDs = [];
 let map;
 let isPlaceComp = false;
