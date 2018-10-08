@@ -1,17 +1,14 @@
-html, body {
-  margin-top: 99px;
+body {
+  margin-top: 6rem;
   /* Sticky Footer */
   display: flex;
   min-height: 90vh;
-  height: 100%;
-  flex-direction: column;}
-
-.center {
-  text-align: center;
+  flex-direction: column;
 }
 
+/* NAVIGATION */
 .navbar {
-  box-shadow: 2px 2px 5px #800020;
+  box-shadow: 2px 2px 5px #888888;
   opacity: 0.9;
   background: #fff; }
   .navbar .nav-item {
@@ -21,31 +18,237 @@ html, body {
 .paw-logo {
   color: #800020; }
 
+/* SLOGAN DISPLAY */
 #showcase {
   position: absolute;
-  top: 15%; }
+  top: 5rem; 
+  font-family: 'Monoton', cursive;
+  font-size: 1rem;
+  color: #800020;
+}
+
+  .typewriter{
+  width: 31rem;
+  overflow: hidden;
+  margin: 0 auto;
+  letter-spacing: .1em;
+  font-size: 4.4rem;
+  animation: typing 2s steps(40, end);
+  }
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
 
 #showcase:after {
   content: '';
   display: block;
   clear: both; }
 
+/* CAROUSEL */
+.container-items {
+  margin: 7rem auto;
+  width: 250px;
+  height: 200px;
+  position: relative;
+  left: 15rem;
+  perspective: 1000px;
+}
+
+.carousel {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  animation: three-dimensions-circle 200s linear infinite;
+}
+
+.item {
+  position: absolute;
+  opacity: 0.95;
+}
+
+.img-border{
+  border-radius: 1rem;
+  box-shadow: 1px 1px 30px #800020;
+}
+
+.img1 {
+  transform: rotateY(0deg) translateZ(350px);
+}
+
+.img2 {
+  transform: rotateY(60deg) translateZ(350px);
+}
+
+.img3 {
+  transform: rotateY(120deg) translateZ(350px);
+}
+
+.img4 {
+  transform: rotateY(180deg) translateZ(350px);
+}
+
+.img5 {
+  transform: rotateY(240deg) translateZ(350px);
+} 
+
+.img6 {
+  transform: rotateY(300deg) translateZ(350px);
+}
+
+@keyframes three-dimensions-circle {
+  to {
+    transform: rotateY(2000deg);
+  }
+}
+
+/* search bar and submit btns */
+
+/* google api */
+#google-maps{
+    width: 450px;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+    margin: 1rem 4.8rem 0 10.5rem;
+    box-shadow: 5px 10px 25px #888888;
+}
+
+.container-dimension{
+  width: 40rem;
+  float: left;
+}
+
+.accordion1{
+  margin: 1rem 4.5rem 0 0;
+}
+
+/* ABOUT US */
+.about-border{
+  box-shadow: 2px 2px 5px #888888
+}
+
+.about-container-border{
+  padding: 2rem 0;
+  box-shadow: 5px 10px 25px #888888;
+}
+
 .info-header {
   width: 50%;
   margin: auto;
-  border-bottom: 1px #ddd solid; }
+  border-bottom: 1px #800020 solid; }
 
 .logo-text {
   font-family: 'Monoton', cursive;
   color: #800020; }
 
-#search-bar {
-  color: #800020; }
+/* TEXTAREA */
+#comment{
+  height: 150px;
+}
 
-@media (max-width: 1850px) {
-  .images {
-    max-height: 1200px; } }
-@media (max-width: 768px) {
+.h3-comment{
+  font-family: 'Monoton', cursive;
+  letter-spacing: 3px;
+  color: #800020;
+  margin-top: 2rem;
+}
+
+/* USER REVIEWS */
+.list-group{
+  box-shadow: 5px 10px 25px #888888;
+}
+
+.comment-barks{
+  font-family: 'Monoton', cursive;
+  letter-spacing: 5px;
+  color: #800020;
+}
+
+#bottom-right-logo{
+  margin-left: 4rem;
+}
+
+
+  /* Sticky Footer */
+  .wrapper {
+    flex: 1;
+  }
+  
+  #fav {
+     display: none;
+   }
+  
+  .review-form {
+    display: none;
+  }
+  
+  #app {
+    margin-bottom: 50px;
+  }
+  
+  #key {
+    font-weight: bold;
+  }
+  
+  #value {
+    font-style: italic;
+  }
+
+  /* LOGIN */
+  .login {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+
+
+
+/* media queries */
+@media screen and (max-width: 1500px){
+#carouselImgSlides{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1200px){
+.container-items {
+   left: 0;
+   margin-top: 4rem;
+   margin-bottom: 0;
+   top: 4rem;
+   }
+ 
+#showcase{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-top: 0 !important;
+  }
+ 
+.typewriter{
+    font-size: 3rem;
+  }
+
+#google-maps{
+  margin: 0 4.8rem 0 10.5rem; 
+ }
+
+ @media screen and (max-width: 995px){
+
+  .container-dimension{
+    float: none;
+  }
+ }
+
+
+
+
+
+
+/* @media (max-width: 768px) {
   #showcase {
     min-height: 500px;
     position: absolute;
@@ -57,86 +260,5 @@ html, body {
     margin-bottom: 1rem; }
 
   .images {
-    max-height: 800px; } }
+    max-height: 800px; } } */
 
-
-.login {
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-/* Sticky Footer */
-.wrapper {
-  flex: 1;
-}
-
-#fav {
-   display: none;
- }
-
-.review-form {
-  display: none;
-}
-
-#app {
-  margin-bottom: 50px;
-}
-
-#key {
-  font-weight: bold;
-}
-
-#value {
-  font-style: italic;
-}
-
-.wrapper {
-  margin-left: 20px;
-}
-
-.jumbotron {
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
-}
-
-#tips {
-  padding: 15px;
-  margin-top: 20px;
-  margin-bottom: 50px;
-  background-color: white;
-  color: black;
-}
-
-#animals {
-  padding-left: 0;
-  padding-right: 0;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-#kitty {
-  max-height: 250px;
-}
-
-#more {
-  display: none;
-}
-
-#list {
-  padding: 10px;
-  display: -webkit-flex;
-  -webkit-justify-content: center;
-  display: flex;
-  justify-content: center;
-}
-
-#petImg {
-  width: 100%;
-  height: 150px;
-}
-
-#petInfo {
-  padding: 10px 20px;
-}
