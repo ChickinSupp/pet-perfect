@@ -171,7 +171,6 @@ body {
   margin-left: 4rem;
 }
 
-
   /* Sticky Footer */
   .wrapper {
     flex: 1;
@@ -197,6 +196,8 @@ body {
     font-style: italic;
   }
 
+
+  
 /* media queries */
 @media (max-width: 768px) {
   #showcase {
