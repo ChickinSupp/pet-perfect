@@ -1,5 +1,5 @@
 const address = [];
-const apiKey = "enter key";
+const apiKey = "AIzaSyDEewIlfcIcurMzXVtLW1QTqvCp19nhuLA";
 const placeIDs = [];
 let map;
 let isPlaceComp = false;
@@ -126,7 +126,7 @@ $('#submit-map').on('click', function () {
 const initMap = (coords) => {
     map = new google.maps.Map(document.getElementById('google-maps'), {
         center: coords,
-        zoom: 11
+        zoom: 13
     });
     getPetPlaces(coords);
 
