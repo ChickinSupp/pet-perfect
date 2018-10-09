@@ -219,35 +219,36 @@ body {
   }
 }
 
-@media screen and (max-width: 1200px){
-.container-items {
-   left: 0;
-   margin-top: 4rem;
-   margin-bottom: 0;
-   top: 4rem;
-   }
- 
-#showcase{
+@media screen and (max-width: 1200px) {
+  .container-items {
+    left: 0;
+    margin-top: 4rem;
+    margin-bottom: 0;
+    top: 4rem;
+  }
+
+  #showcase {
     position: relative;
     display: flex;
     justify-content: center;
     padding-top: 0 !important;
   }
- 
-.typewriter{
+
+  .typewriter {
     font-size: 3rem;
   }
 
-#google-maps{
-  margin: 0 4.8rem 0 10.5rem; 
- }
+  #google-maps {
+    margin: 0 4.8rem 0 10.5rem;
+  }
+}
 
  @media screen and (max-width: 995px){
 
   .container-dimension{
     float: none;
   }
- }}
+ }
 
 /* @media (max-width: 768px) {
   #showcase {
