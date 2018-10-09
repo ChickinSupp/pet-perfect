@@ -188,24 +188,23 @@
         <div class='container'>
             <div class='row'>
                 <div class='col-md-2'>
-                    <form class="form-inline">
+                    <!-- <form class="form-inline">
                         <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-                            <option selected>Pet Clinics</option>
-                            <option value="1">Pet Stores</option>
-                            <option value="2">Pet Parks</option>
+                            <option class='userChoice' selected data-text='pet+clinics'><button>Pet Clinics</button></option>
+                            <option class='userChoice' value="1" data-text='pet+stores'><button>Pet Stores</button></option>
+                            <option class='userChoice' value="2" data-text='dog+parks'><button>Pet Parks</button></option>
                             </select>
-                    </form>
-                    <!-- <div class='dropdown'>
+                    </form> -->
+                    <div class='dropdown'>
                         <button class='btn btn-primary dropdown-toggle form-control form-control-lg mb-resp' type='button'
                             id='dropdownMenu2' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
-                            Genre
                         </button>
                         <div class='dropdown-menu' aria-labelledby='dropdownMenu2'>
-                            <button class='dropdown-item userChoice' type='button' data-text='veterinary'  data-toggle='dropdown' value='Pet Clinics'>Pet Clinics</button>
-                            <button class='dropdown-item userChoice' type='button' data-text='pet+stores' data-toggle='dropdown'>Pet Stores</button>
-                            <button class='dropdown-item userChoice' type='button' data-text='dog+parks' data-toggle='dropdown'>Pet Parks</button>
+                            <button id='pet-clinics' class='dropdown-item userChoice' type='button' data-text='veterinary'  data-toggle='dropdown' value='Pet Clinics'>Pet Clinics</button>
+                            <button id='pet-stores' class='dropdown-item userChoice' type='button' data-text='pet+stores' data-toggle='dropdown'>Pet Stores</button>
+                            <button id='pet-parks' class='dropdown-item userChoice' type='button' data-text='dog+parks' data-toggle='dropdown'>Pet Parks</button>
                         </div>
-                    </div> -->
+                    </div>
                 </div>
                 <div class='col-md-5'>
                     <input id='user-address' type='text' class='form-control form-control-lg mb-resp' placeholder='Enter Address, City, or Zip Code'>
@@ -234,11 +233,6 @@
                 </div>
                 <div id='collapse1' class='collapse'>
                     <div id='location-dump' class='card-body'>
-                        1. <br>
-                        2. <br>
-                        3. <br>
-                        4. <br>
-                        5. <br>
                     </div>
                 </div>
             </div>
@@ -253,11 +247,6 @@
                 </div>
                 <div id='collapse2' class='collapse'>
                     <div class='card-body'>
-                        1. <br>
-                        2. <br>
-                        3. <br>
-                        4. <br>
-                        5. <br>
                     </div>
                 </div>
             </div>
@@ -272,11 +261,6 @@
                 </div>
                 <div id='collapse3' class='collapse'>
                     <div class='card-body'>
-                        1. <br>
-                        2. <br>
-                        3. <br>
-                        4. <br>
-                        5. <br>
                     </div>
                 </div>
             </div>
