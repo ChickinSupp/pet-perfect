@@ -74,17 +74,17 @@
     <!-- carousel for max-width 700px -->
     <div id='carouselImgSlides' class='carousel2 slide' data-ride='carousel'>
         <div class='carousel-inner'>
-          <div class='carousel-item active'>
-            <img class='d-block w-100 snd-carousel-display' src='resources/img/preciousP.jpg' alt='First slide'>
-          </div>
-          <div class='carousel-item'>
-            <img class='d-block w-100 snd-carousel-display' src='resources/img/seleneSmile.jpg' alt='Second slide'>
-          </div>
-          <div class='carousel-item'>
-            <img class='d-block w-100 snd-carousel-display' src='resources/img/cardiBSmile.jpg' alt='Third slide'>
-          </div>
+            <div class='carousel-item active'>
+                <img class='d-block w-100 snd-carousel-display' src='resources/img/preciousP.jpg' alt='First slide'>
+            </div>
+            <div class='carousel-item'>
+                <img class='d-block w-100 snd-carousel-display' src='resources/img/seleneSmile.jpg' alt='Second slide'>
+            </div>
+            <div class='carousel-item'>
+                <img class='d-block w-100 snd-carousel-display' src='resources/img/cardiBSmile.jpg' alt='Third slide'>
+            </div>
         </div>
-      </div>
+    </div>
 
     <div style='clear:both'></div>
 
@@ -117,10 +117,11 @@
                             About Us!
                         </h1>
                         <p class='lead pb-3'>
-                            Here at PetPerfect we believe that all your resources should be easily obtainable from a single 
+                            Here at PetPerfect we believe that all your resources should be easily obtainable from a
+                            single
                             a singly page. Eliminating the need to get stuck in a google 'rabbit whole'. All you
-                            have to do is pick a genre, enter where you live, hit that submit button and wallah!
-                            All the resources for the genre you picked! 
+                            have to do is pick a genre, enter where you live, hit that submit button and voila!
+                            All the resources for the genre you picked!
                         </p>
                     </div>
 
@@ -187,17 +188,24 @@
         <div class='container'>
             <div class='row'>
                 <div class='col-md-2'>
-                    <div class='dropdown '>
+                    <form class="form-inline">
+                        <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                            <option selected>Pet Clinics</option>
+                            <option value="1">Pet Stores</option>
+                            <option value="2">Pet Parks</option>
+                            </select>
+                    </form>
+                    <!-- <div class='dropdown'>
                         <button class='btn btn-primary dropdown-toggle form-control form-control-lg mb-resp' type='button'
                             id='dropdownMenu2' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
                             Genre
                         </button>
                         <div class='dropdown-menu' aria-labelledby='dropdownMenu2'>
-                            <button class='dropdown-item userChoice' type='button' data-text='veterinary'  data-toggle='dropdown'>Pet Clinics</button>
+                            <button class='dropdown-item userChoice' type='button' data-text='veterinary'  data-toggle='dropdown' value='Pet Clinics'>Pet Clinics</button>
                             <button class='dropdown-item userChoice' type='button' data-text='pet+stores' data-toggle='dropdown'>Pet Stores</button>
                             <button class='dropdown-item userChoice' type='button' data-text='dog+parks' data-toggle='dropdown'>Pet Parks</button>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class='col-md-5'>
                     <input id='user-address' type='text' class='form-control form-control-lg mb-resp' placeholder='Enter Address, City, or Zip Code'>
@@ -306,7 +314,7 @@
         </div>
     </section>
 
-    <!-- USER REVIEWS -->               
+    <!-- USER REVIEWS -->
     <section class='bg-light py-5'>
         <div class='container'>
             <div class='row'>
@@ -355,7 +363,7 @@
     <script src='https://www.gstatic.com/firebasejs/5.5.3/firebase-firestore.js'></script>
     <script src='https://www.gstatic.com/firebasejs/5.5.2/firebase-auth.js'></script>
 
-      <!-- LIBRARIES   -->
+    <!-- LIBRARIES   -->
     <script src='https://code.jquery.com/jquery-3.3.1.js' integrity='sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60='
         crossorigin='anonymous'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js' integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49'
