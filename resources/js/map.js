@@ -180,9 +180,14 @@ const renderMarks = (map, idArr) => {
             placeId: idArr[i].id
         }, function (place, status) {
             if (status === google.maps.places.PlacesServiceStatus.OK) {
-                //create marker for a place
+                //create for a place
                 let marker = new google.maps.Marker({
-
+                    icon: {
+                        url: `resources/img/markers/mark3.png`,
+                        size: new google.maps.Size(22, 43),
+                        origin: new google.maps.Point(0, 0),
+                        anchor: new google.maps.Point(25.5, 29)
+                    },
                     map: map,
                     animation: google.maps.Animation.DROP,
                     position: place.geometry.location
@@ -191,8 +196,8 @@ const renderMarks = (map, idArr) => {
                 //if click on the marker, an info window will render above it showing specific detais about the place
                 google.maps.event.addListener(marker, 'click', function () {
                     infowindow.setContent('<div id="fade-test"><strong>' + place.name + '</strong><br>' +
-                        'Rating: ' + place.rating + '<br>' + place.formatted_phone_number + '<br>' +
-                        place.formatted_address + '</div>');
+                        'Rating: ' + place.rating  + checkPhone() + 
+                        getTravelUrl(address, place.formatted_address) + '</div>');
                     infowindow.open(map, this);
                 });
                 function toggleBounce() {
@@ -219,15 +224,21 @@ const renderMarks = (map, idArr) => {
                 //if the place rating is greater than or equal to 4.6, render the follwoing conent to the 'recommendations' div
                 if (place.rating >= 4.6) {
 
-                    //creates a div that will hold the info for the recommended location
                     let text = $('<div id="fade-test"><strong>' + place.name + '</strong><br>' +
                         'Rating: ' + place.rating + checkPhone() +
-                        place.formatted_address + '</div>');
-                    // dumps recommended location to an div with the following ID
+                        '</div>' + getTravelUrl(address, place.formatted_address));
+
                     $("#location-dump").append(text);
 
                 }
+                
             }
         });
     }
+
+}
+
+//returns googlemap directions url
+const getTravelUrl = (origin, destination) => {
+    return `<a href="https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${destination}&travelmode=driving" target="_blank">${destination}</a>`;
 }
