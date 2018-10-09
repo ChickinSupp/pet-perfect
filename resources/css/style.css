@@ -6,6 +6,12 @@ body {
   flex-direction: column;
 }
 
+.custom-select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 /* NAVIGATION */
 .navbar {
   box-shadow: 2px 2px 5px #888888;
@@ -322,22 +328,3 @@ body {
   } 
 
 }
-
-
-
-
-
-/* @media (max-width: 768px) {
-  #showcase {
-    min-height: 500px;
-    position: absolute;
-    top: 20%; }
-    #showcase h1 {
-      font-size: 4rem; }
-
-  .mb-resp {
-    margin-bottom: 1rem; }
-
-  .images {
-    max-height: 800px; } } */
-
