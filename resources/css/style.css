@@ -196,24 +196,12 @@ body {
     font-style: italic;
   }
 
-<<<<<<< HEAD
 
   
-=======
-  /* LOGIN */
-  .login {
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-
-
-
-
->>>>>>> 02a70e5c389a8251d585a355ab54dd642ab234e5
 /* media queries */
 
 /* 1500px */
-@media screen and (max-width: 1500px){
+@media screen and (max-width: 2000px){
 
 #carouselImgSlides{
     visibility: hidden;
@@ -275,6 +263,20 @@ body {
     top: 1rem;
   }
 
+  
+  /* #carouselImgSlides{
+    position: relative;
+    top: 20rem;
+    height: calc(100vh - 3.5rem);
+  }
+
+  #showcase{
+    position: relative;
+    top: 7rem;
+    left: 3rem;
+    font-size: 5rem;
+  }  */
+
   .about-border{
     padding-top: 0 !important;
   }
@@ -304,33 +306,26 @@ body {
  }
 
  /* 580px */
- @media screen and (max-width:580px){
+@media screen and (max-width:580px){
 
   .container-dimension{
     position:relative;
     right: 10rem;
- }
+ } 
+ 
+}
+
+@media screen and (max-width:480px){
+
+  .carousel-inner{
+    height: 40rem;
+  } 
 
 }
 
-@media screen and (max-width:580px){
 
-  .snd-carousel-display{
-    height: 30rem;
-  }
 
-  #showcase{
-    position: absolute;
-    top: 10rem;
-    left: 3rem;
-    font-size: 5rem;
-  }
 
-  .typewriter{
-    color: #fff
-  }
-
-}
 
 /* @media (max-width: 768px) {
   #showcase {
