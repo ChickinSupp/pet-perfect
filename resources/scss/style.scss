@@ -2,9 +2,13 @@ $primary: #800020;
 $primary-overlay: rgba(128,0,32,0.8);
 
 body{
-    margin-top: 99px;
+    margin-top: 6rem;
 }
 
+.paw-logo{
+    color: #800020;
+
+// navigation
 .navbar{
     box-shadow: 2px 2px 5px $primary;
     opacity: 0.9;
@@ -17,13 +21,10 @@ body{
     }
 }
 
-.paw-logo{
-    color: #800020;
-}
-
+// slogan container
 #showcase{
     position: absolute;
-    top: 15%;
+    top: 5rem;
 }
 
 #showcase:after{
@@ -43,15 +44,20 @@ body{
     color: #800020;
 }
 
+.carousel-inner{
+    height: calc(100vh - 6rem) !important;
+}
+
 #search-bar{
     color: #800020;
 }
 
-@media(max-width: 1850px){
-    .images{
-        max-height: 1200px;
-    }
-}
+// @media screen and (max-width: 1300px){
+//     #showcase{
+//         position: absolute;
+//         left: 20rem;
+//     }
+// }
 
 @media(max-width: 768px){
     #showcase{
