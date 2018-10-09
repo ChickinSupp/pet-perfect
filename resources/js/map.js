@@ -25,7 +25,7 @@ const getAddress = () => {
 
 
 $(document).ready(function () {
-    $(".filled-in").on("click", function () {
+    $(".userChoice").on("click", function () {
         $(this).attr("isSelected", "true");
         $("#location-dump").empty();
         toSearchFor = "";
