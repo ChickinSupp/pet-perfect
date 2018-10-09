@@ -1,9 +1,15 @@
 body {
-  margin-top: 6rem;
+  margin-top: 4rem;
   /* Sticky Footer */
   display: flex;
   min-height: 90vh;
   flex-direction: column;
+}
+
+.custom-select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 /* NAVIGATION */
@@ -241,12 +247,7 @@ body {
   .container-dimension{
     float: none;
   }
- }
-
-
-
-
-
+ }}
 
 /* @media (max-width: 768px) {
   #showcase {
@@ -261,4 +262,7 @@ body {
 
   .images {
     max-height: 800px; } } */
+
+
+
 
