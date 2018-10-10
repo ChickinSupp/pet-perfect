@@ -32,8 +32,8 @@
                     <a class="nav-item nav-link active" href=""></a>
                     <a class="nav-item nav-link" href="index.html">Home</a>
                     <a class="nav-item nav-link" href="adopt.html">Adopt</a>
-                    <a class="nav-item nav-link" href="">Search</a>
-                    <a class="nav-item nav-link" href="">Barks&Purrs</a>
+                    <a class="nav-item nav-link" href="#search-api">Search</a>
+                    <a class="nav-item nav-link" href="#barks-purrs">Barks&Purrs</a>
                     <a href='#' id='uilogin' class='btn btn-outline-primary btn-lg'>
                         Login
                     </a>
@@ -121,7 +121,7 @@
                     </div>
 
                     <!-- ACCORDION -->
-                    <div id='accordion'>
+                    <div id='search-api' id='accordion'>
                         <div class='card'>
                             <div class='card-header'>
                                 <h5 class='mb-0'>
@@ -179,13 +179,13 @@
     </section>
 
     <!-- SEARCH BAR -->
-    <section class='search-bar text-white py-5 bg-light'>
+    <section id='barks-purrs' class='search-bar text-white py-5 bg-light'>
         <div class='container'>
             <div class='row'>
                 <div class='col-md-2'>
                     <div class='dropdown'>
-                        <button class='btn btn-primary dropdown-toggle form-control form-control-lg mb-resp' type='button'
-                            id='dropdownMenu2' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>Select
+                        <button class='btn btn-primary dropdown-toggle form-control form-control-lg mb-resp selector'
+                            type='button' id='dropdownMenu2' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>Select
                         </button>
                         <div class='dropdown-menu' aria-labelledby='dropdownMenu2'>
                             <button id='pet-clinics' class='dropdown-item userChoice' type='button' data-text='veterinary'
@@ -209,155 +209,134 @@
         </div>
     </section>
 
-    <div class='bg-light'>
-        <div class='container-dimension'>
-            <div id='google-maps'></div>
-        </div>
-        <div id='accordion' class='accordion1 text-center'>
-            <div class='card'>
-                <div class='card-header'>
-                    <h5 class='mb-0'>
-                        <div href='#collapse1' data-toggle='collapse' data-parent='#accordion'>
-                            <i class='fas fa-arrow-circle-down'></i> Pet Clinics
+    <section>
+            <div class='bg-light'>
+                    <div class="container">
+                        <div class='container-dimension'>
+                            <div id='google-maps'></div>
                         </div>
-                    </h5>
-                </div>
-                <div id='collapse1' class='collapse'>
-                    <div id='location-dump' class='card-body'>
                     </div>
-                </div>
-            </div>
-
-            <div class='card'>
-                <div class='card-header'>
-                    <h5 class='mb-0'>
-                        <div href='#collapse2' data-toggle='collapse' data-parent='#accordion'>
-                            Pet Stores
-                        </div>
-                    </h5>
-                </div>
-                <div id='collapse2' class='collapse'>
-                    <div class='card-body'>
-                    </div>
-                </div>
-            </div>
-
-            <div class='card'>
-                <div class='card-header'>
-                    <h5 class='mb-0'>
-                        <div href='#collapse3' data-toggle='collapse' data-parent='#accordion'>
-                            Pet Parks
-                        </div>
-                    </h5>
-                </div>
-                <div id='collapse3' class='collapse'>
-                    <div class='card-body'>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Review -->
-    <section class='bg-light py-5'>
-        <div class='container'>
-            <div class='row justify-content-center align-items-center'>
-                <div class='col-lg-9 review-form'>
-                    <h3 class='text-center h3-comment'>Leave a Pawprint</h3>
-                    <form id='myForm'>
-                        <div class='input-group input-group-lg mb-3'>
-                            <div class='input-group-prepend'>
-                                <span class='input-group-text'>
-                                    <i class='fas fa-user'></i>
-                                </span>
+            
+                    <div style='clear:both'></div>
+            
+                    <div id='accordion' class='accordion1 text-center'>
+                        <div class='card'>
+                            <div class='card-header'>
+                                <h5 class='mb-0'>
+                                    <div href='#collapse1' data-toggle='collapse' data-parent='#accordion'>
+                                        <i class='fas fa-arrow-circle-down'></i> Pet Approved Choices
+                                    </div>
+                                </h5>
                             </div>
-                            <input id='name' type='text' class='form-control' placeholder='Name'>
-                        </div>
-                        <div class='input-group input-group-lg mb-3'>
-                            <div class='input-group-prepend'>
-                                <span class='input-group-text'>
-                                    <i class='fas fa-pencil-alt'></i>
-                                </span>
+                            <div id='collapse1' class='collapse'>
+                                <div id='location-dump' class='card-body'>
+                                </div>
                             </div>
-                            <textarea id='comment' class='form-control' rows='5' placeholder='Comment'></textarea>
                         </div>
-
-                        <input type='submit' value='Submit' id='submit' class='btn btn-primary btn-block btn-lg'>
-                    </form>
-                </div>
-            </div>
-        </div>
     </section>
+    
 
-    <!-- USER REVIEWS -->
-    <section class='bg-light py-5'>
-        <div class='container'>
-            <div class='row'>
-                <div class='col-lg-9'>
-                    <h4 class='text-center comment-barks'>Barks & Purrs</h4>
-                    <div class='card' id='app'>
-                        <ul class='list-group list-group-flush'>
-                            <li id='reviews' class='list-group-item' v-for='review in reviews'><span id='key'>{{
-                                    review.key
-                                    }}:</span><br><span id='value'>'{{ review.value }}'</span> </li>
-                        </ul>
+            <!-- Review -->
+            <section class='bg-light py-5'>
+                <div class='container'>
+                    <div class='row justify-content-center align-items-center'>
+                        <div class='col-lg-9 review-form'>
+                            <h3 class='text-center h3-comment'>Leave a Pawprint</h3>
+                            <form id='myForm'>
+                                <div class='input-group input-group-lg mb-3'>
+                                    <div class='input-group-prepend'>
+                                        <span class='input-group-text'>
+                                            <i class='fas fa-user'></i>
+                                        </span>
+                                    </div>
+                                    <input id='name' type='text' class='form-control' placeholder='Name'>
+                                </div>
+                                <div class='input-group input-group-lg mb-3'>
+                                    <div class='input-group-prepend'>
+                                        <span class='input-group-text'>
+                                            <i class='fas fa-pencil-alt'></i>
+                                        </span>
+                                    </div>
+                                    <textarea id='comment' class='form-control' rows='5' placeholder='Comment'></textarea>
+                                </div>
+
+                                <input type='submit' value='Submit' id='submit' class='btn btn-primary btn-block btn-lg'>
+                            </form>
+                        </div>
                     </div>
                 </div>
-                <div class='col-lg-3 align-self-center'>
-                    <a id='bottom-right-logo' href='index.html' class='navbar-brand'>
-                        <i class='fas fa-paw paw-logo'></i>
-                        <h3 class='d-inline align-middle logo-text'>Pet Perfect</h3>
-                    </a>
+            </section>
+
+            <!-- USER REVIEWS -->
+            <section class='bg-light py-5'>
+                <div class='container'>
+                    <div class='row'>
+                        <div class='col-lg-9'>
+                            <h4 class='text-center comment-barks'>Barks & Purrs</h4>
+                            <div class='card' id='app'>
+                                <ul class='list-group list-group-flush'>
+                                    <li id='reviews' class='list-group-item' v-for='review in reviews'><span id='key'>{{
+                                            review.key
+                                            }}:</span><br><span id='value'>'{{ review.value }}'</span> </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class='col-lg-3 align-self-center'>
+                            <a id='bottom-right-logo' href='index.html' class='navbar-brand'>
+                                <i class='fas fa-paw paw-logo'></i>
+                                <h3 class='d-inline align-middle logo-text'>Pet Perfect</h3>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <!-- FOOTER -->
-    <footer id='main-footer' class='py-5 bg-primary text-white'>
-        <div class='container'>
-            <div class='row text-center'>
-                <div class='col-lg-3 align-self-center'>
-                    <a href='index.html' class='navbar-brand'>
-                        <i id='bottom-paw-logo' class=' text-white fas fa-paw'></i>
-                        <h3 id='bottom-left-logo' class=' logo-text text-white d-inline align-middle'>Pet Perfect</h3>
-                    </a>
+            <!-- FOOTER -->
+            <footer id='main-footer' class='py-5 bg-primary text-white'>
+                <div class='container'>
+                    <div class='row text-center'>
+                        <div class='col-lg-3 align-self-center'>
+                            <a href='index.html' class='navbar-brand'>
+                                <i id='bottom-paw-logo' class=' text-white fas fa-paw'></i>
+                                <h3 id='bottom-left-logo' class=' logo-text text-white d-inline align-middle'>Pet
+                                    Perfect</h3>
+                            </a>
+                        </div>
+                        <div class='col-md-6 ml-auto'>
+                            <p class='lead'>
+                                Copyright &copy; <span id='year'></span>
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class='col-md-6 ml-auto'>
-                    <p class='lead'>
-                        Copyright &copy; <span id='year'></span>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
+            </footer>
 
 
-    <!-- LIBRARIES   -->
-    <script src='https://code.jquery.com/jquery-3.3.1.js' integrity='sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60='
-        crossorigin='anonymous'></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js' integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49'
-        crossorigin='anonymous'></script>
-    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js' integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy'
-        crossorigin='anonymous'></script>
-    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+            <!-- LIBRARIES   -->
+            <script src='https://code.jquery.com/jquery-3.3.1.js' integrity='sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60='
+                crossorigin='anonymous'></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                crossorigin="anonymous"></script>
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js' integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49'
+                crossorigin='anonymous'></script>
+            <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js' integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy'
+                crossorigin='anonymous'></script>
+            <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
 
-    <!-- Firebase -->
-    <script src='https://www.gstatic.com/firebasejs/5.5.2/firebase-app.js'></script>
-    <script src='https://www.gstatic.com/firebasejs/5.5.3/firebase-firestore.js'></script>
-    <script src='https://www.gstatic.com/firebasejs/5.5.2/firebase-auth.js'></script>
+            <!-- Firebase -->
+            <script src='https://www.gstatic.com/firebasejs/5.5.2/firebase-app.js'></script>
+            <script src='https://www.gstatic.com/firebasejs/5.5.3/firebase-firestore.js'></script>
+            <script src='https://www.gstatic.com/firebasejs/5.5.2/firebase-auth.js'></script>
 
-    <!--  APIs    -->
-    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
-    <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDEewIlfcIcurMzXVtLW1QTqvCp19nhuLA&libraries=places'></script>
+            <!--  APIs    -->
+            <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+            <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDEewIlfcIcurMzXVtLW1QTqvCp19nhuLA&libraries=places'></script>
 
-    <!--  SOURCE FIELS  -->
-    <script src='resources/js/config.js'></script>
-    <script src='resources/js/app.js'></script>
-    <script src='resources/js/fire.js'></script>
-    <script src='resources/js/map.js'></script>
+            <!--  SOURCE FIELS  -->
+            <script src='resources/js/config.js'></script>
+            <script src='resources/js/app.js'></script>
+            <script src='resources/js/fire.js'></script>
+            <script src='resources/js/map.js'></script>
 </body>
 
 </html>
