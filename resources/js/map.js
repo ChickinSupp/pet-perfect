@@ -27,15 +27,10 @@ $(document).ready(function() {
   $(".userChoice").on("click", function() {
     toSearchFor = "";
     toSearchFor = $(this).attr("data-text");
-    console.log(toSearchFor);
-
+    $('#location-dump').empty();
     isFormComplete = true;
     parkIDs = [];
   });
-});
-
-$(function() {
-  $("#google-maps").removeAttr("style");
 });
 
 $("#submit-map").on("click", function() {
@@ -45,18 +40,18 @@ $("#submit-map").on("click", function() {
   let coords;
   let queryUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${userAddress}&key=${apiKey}`;
 
+  document.querySelector('.container-dimension').style.display = 'block';
+
   $.ajax({
     url: queryUrl,
     method: "GET"
   }).then(function(response) {
-    console.log(response);
     var source = response.results;
     for (var i = 0; i < source.length; i++) {
       coords = {
         lat: source[i].geometry.location.lat,
         lng: source[i].geometry.location.lng
       };
-      console.log(coords);
     }
     initMap(coords);
   });
@@ -164,7 +159,7 @@ const renderMarks = (map, idArr) => {
             }
           }
           //if the place rating is greater than or equal to 4.6, render the follwoing conent to the 'recommendations' div
-          if (place.rating >= 4.6) {
+          if (place.rating >= 4.0) {
             let text = $(
               '<div id="fade-test"><strong>' +
                 place.name +
