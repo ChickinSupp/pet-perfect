@@ -14,8 +14,7 @@
 #animals {
     padding-left: 0;
     padding-right: 0;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    margin: 0 10px 10px 10px;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -68,4 +67,34 @@
 
 #petInfo {
     padding: 10px 20px;
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 575px) {
+    body {
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+
+    #modalLogo {
+        display: none;
+    }
+    #animals {
+        padding: 15px;
+    }
+
+    .funDiv {
+        margin-bottom: 10px;
+    }
+
+    .midDiv {
+        width: 100%;
+        height: 60vh;
+        background: url("../img/doggo.jpg");
+        background-size: cover;
+    }
 }
