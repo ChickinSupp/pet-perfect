@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset='UTF-9'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <link rel='stylesheet' href='resources/css/bootstrap.css'>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.3.1/css/all.css' integrity='sha394-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y9vEf7N7fWAU'
+        crossorigin='anonymous'>
+    <link href='https://fonts.googleapis.com/css?family=Monoton' rel='stylesheet'>
+    <link rel='stylesheet' type='text/css' href='resources/css/style.css'>
+    <link rel='stylesheet' type='text/css' href='resources/css/adopt.css'>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Adopt</title>
+</head>
+<body>
+<div id='home' data-spy='scroll' data-target='#main-nav'>
+    <!-- main nav -->
+    <nav class="navbar navbar-expand-md navbar-light fixed-top py-2">
+        <div class="container">
+            <a href='index.html' class='navbar-brand'>
+                <i class='fas fa-paw paw-logo'></i>
+                <h3 class='d-inline align-middle logo-text'>Pet Perfect</h3>
+            </a>
+            <button class="navbar-toggler nav-outline" data-toggle="collapse" data-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href=""></a>
+                    <a class="nav-item nav-link" href="index.html"> Back to Homepage</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="parallax">
+        <div class="topDiv">
+            <div class="row">
+                <div class="col-sm-12 col-md-6" id="main">
+                    <div class="jumbotron">
+                        <h1 class="display-4">Looking to adopt a pet?</h1>
+                        <p class="lead">If you're thinking about adopting a pet, you're in luck. Thanks to <span><a
+                                    href="https://www.petfinder.com/"> Petfinder</a></span> there's thousands of pets
+                            to choose from!</p>
+                        <hr class="my-4">
+                        <p>Find your furry friend today.</p>
+                        <form id="petForm">
+                            <div class="form-row align-items-center">
+                                <div class="col-sm-6 col-md-4 my-1">
+                                    <label class="mr-sm-2 sr-only" for="pets">Pets</label>
+                                    <select class="custom-select mr-sm-2" id="pets">
+                                        <option selected>Select Type...</option>
+                                        <option value="1">Dog</option>
+                                        <option value="2">Cat</option>
+                                        <option value="3">Reptile</option>
+                                        <option value="4">Smallfurry</option>
+                                        <option value="5">Rabbit</option>
+                                        <option value="6">Bird</option>
+                                        <option value="7">Horse</option>
+                                        <option value="8">Barnyard</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-6 col-md-6">
+                                    <label class="sr-only" for="zip">Zip</label>
+                                    <input type="text" class="form-control" id="zip" onfocus="this.value=''"
+                                        placeholder="Zip Code">
+                                </div>
+                                <div class="col-sm-6 col-md-6 my-2">
+                                    <button type="button" id="find" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#myModal">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row d-flex" id="tips">
+                <div class="col-sm-12 col-md-6">
+                    <h4>Tips for Finding the Right Pet</h4>
+                    <ul>
+                        <li>Choose the type of pet you and your family will be comfortable with.</li>
+                        <li>Assess your space.</li>
+                        <li>Plan ahead for per care.</li>
+                        <li>Consider time management.</li>
+                        <li>Look for signs of good health.</li>
+                        <li>Read your adoption contract carefully.</li>
+                        <li>Take your new furry friend for a veterinary exam.</li>
+                    </ul>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <img id="kitty" class="img-fluid" src="./resources/img/kitty.jpg" alt="kitty">
+                </div>
+
+            </div>
+
+            <div class="row funDiv">
+                <div class="col-md-12">
+                    <h4>Fun Facts About Pets</h4>
+                    <a id="factsBtn" class="text-align-center btn btn-primary" data-toggle="collapse" href="#facts" role="button"
+                        aria-expanded="false" aria-controls="facts">Click to VIew</a>
+                </div>
+                <div class="col-md-12">
+                    <div class="collapse multi-collapse" id="facts">
+                        <div class="card card-body factIs"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="midDiv"></div>
+
+    </div>
+
+    <!-- modal -->
+    <div class="modal fade bd-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="modalTitle"> Your Results</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="row" id="list"></div>
+                <div class="modal-footer">
+                    <a id='modalLogo' href='index.html' class='navbar-brand ml-auto'>
+                        <i class='fas fa-paw paw-logo'></i>
+                        <h3 class='d-inline align-middle logo-text'>Pet Perfect</h3>
+                    </a>
+                    <button type="button" id="more" class="btn btn-primary">Next</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer id="main-footer" class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-6 ml-auto">
+                    <p class="lead">
+                        Copyright &copy; <span id="year"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-auth.js"></script>
+
+    <!--   LIBRARIES   -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+    <!--  SOURCE FIELS  -->
+    <script src='resources/js/app.js'></script>
+    <script src='resources/js/pets.js'></script>
+
+    </body>
+
+</html>

@@ -1,8 +1,20 @@
 body {
-  margin-top: 99px; }
+  margin-top: 4rem;
+  /* Sticky Footer */
+  display: flex;
+  min-height: 95vh;
+  flex-direction: column;
+}
 
+.custom-select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* NAVIGATION */
 .navbar {
-  box-shadow: 2px 2px 5px #800020;
+  box-shadow: 2px 2px 5px #888888;
   opacity: 0.9;
   background: #fff; }
   .navbar .nav-item {
@@ -10,42 +22,276 @@ body {
     padding-right: 1.4rem; }
 
 .paw-logo {
-  color: #800020; }
+  color: #800020; 
+}
 
+#mainNav{
+  flex-direction: row-reverse;
+}
+
+/* SLOGAN DISPLAY */
 #showcase {
   position: absolute;
-  top: 15%; }
+  top: 5rem; 
+  font-family: 'Monoton', cursive;
+  font-size: 1rem;
+  color: #800020;
+}
 
 #showcase:after {
   content: '';
   display: block;
   clear: both; }
 
+  .typewriter{
+    margin-left: 5rem;
+  }
+
+/* CAROUSEL */
+.container-items {
+  margin: 7rem auto;
+  width: 250px;
+  height: 200px;
+  position: relative;
+  left: 15rem;
+  perspective: 1000px;
+}
+
+.carousel {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  animation: three-dimensions-circle 200s linear infinite;
+}
+
+.item {
+  position: absolute;
+  opacity: 0.95;
+}
+
+.img-border{
+  border-radius: 1rem;
+  box-shadow: 1px 1px 30px #800020;
+}
+
+.img1 {
+  transform: rotateY(0deg) translateZ(350px);
+}
+
+.img2 {
+  transform: rotateY(60deg) translateZ(350px);
+}
+
+.img3 {
+  transform: rotateY(120deg) translateZ(350px);
+}
+
+.img4 {
+  transform: rotateY(180deg) translateZ(350px);
+}
+
+.img5 {
+  transform: rotateY(240deg) translateZ(350px);
+} 
+
+.img6 {
+  transform: rotateY(300deg) translateZ(350px);
+}
+
+@keyframes three-dimensions-circle {
+  to {
+    transform: rotateY(2000deg);
+  }
+}
+
+/* search bar and submit btns */
+
+/* google api */
+#google-maps{
+    width: 450px;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+    margin: 1rem 4.8rem 0 10.5rem;
+    box-shadow: 5px 10px 25px #888888;
+}
+
+.container-dimension{
+  width: 40rem;
+  float: left;
+  display: none;
+}
+
+.accordion1{
+  margin: 1rem 4.5rem 0 4.5rem;
+}
+
+/* ABOUT US */
+.about-container-border{
+  padding: 2rem 0;
+  box-shadow: 5px 10px 25px #888888;
+}
+
 .info-header {
   width: 50%;
   margin: auto;
-  border-bottom: 1px #ddd solid; }
+  border-bottom: 1px #800020 solid; }
 
 .logo-text {
   font-family: 'Monoton', cursive;
   color: #800020; }
 
-#search-bar {
-  color: #800020; }
+/* TEXTAREA */
+#comment{
+  height: 150px;
+}
 
-@media (max-width: 1850px) {
-  .images {
-    max-height: 1200px; } }
-@media (max-width: 768px) {
-  #showcase {
-    min-height: 500px;
+.h3-comment{
+  font-family: 'Monoton', cursive;
+  letter-spacing: 3px;
+  color: #800020;
+  margin-top: 2rem;
+}
+
+/* USER REVIEWS */
+.list-group{
+  box-shadow: 5px 10px 25px #888888;
+}
+
+.comment-barks{
+  font-family: 'Monoton', cursive;
+  letter-spacing: 5px;
+  color: #800020;
+}
+
+#bottom-right-logo{
+  margin-left: 4rem;
+}
+
+  /* Sticky Footer */
+  .wrapper {
+    flex: 1;
+      margin-top: 40px;
+  }
+
+  #fav {
+     display: none;
+   }
+
+  .review-form {
+    display: none;
+  }
+
+  #app {
+    margin-bottom: 50px;
+  }
+
+  #key {
+    font-weight: bold;
+  }
+
+  #value {
+    font-style: italic;
+  }
+
+
+  
+/* media queries */
+
+/* 1500px */
+@media screen and (max-width: 2000px){
+
+#carouselImgSlides{
+    visibility: hidden;
     position: absolute;
-    top: 20%; }
-    #showcase h1 {
-      font-size: 4rem; }
+  }
+}
 
-  .mb-resp {
-    margin-bottom: 1rem; }
+/* 1200px */
+@media screen and (max-width: 1200px){
+.container-items {
+   left: 0;
+   margin-top: 4rem;
+   margin-bottom: 0;
+   top: 4rem;
+   }
+ 
+#showcase{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-top: 0 !important;
+  }
+ 
+.typewriter{
+    font-size: 3rem;
+  }
 
-  .images {
-    max-height: 800px; } }
+#google-maps{
+  margin: 0 4.8rem 0 10.5rem; 
+ }
+}
+
+/* 768px */
+@media screen and (max-width: 780){
+
+  .container-dimension{
+    float: none;
+  }
+
+  .accordion1{
+    margin: 1rem 4.5rem 0 4.5rem;
+  }
+
+  #bottom-right-logo{
+    display: none;
+  }
+
+}
+
+ /* 580px */
+ @media screen and (max-width:580px){
+
+  .carousel{ 
+    animation: 0s;
+  }
+
+  .carousel-inner{
+    height: 20rem;
+  } 
+  
+  .typewriter{
+    position: relative;
+      bottom: 4.5rem;
+  }  
+
+  .container-items{
+    display: none;
+  }
+  
+  #carouselImgSlides{
+    visibility: visible;
+    position: relative;
+  }
+
+  .container-dimension{
+    position:relative;
+    right: 9rem;
+ } 
+
+#google-maps{
+width: 330px;
+height: 270PX;
+display: none;
+}
+
+.accordion1{
+  margin: 0;
+}
+
+#bottom-right-logo{
+  display: none;
+}
+
+}
