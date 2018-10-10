@@ -233,6 +233,12 @@ body {
  }
 }
 
+/* 990px */
+@media screen and (max-width: 990px){
+  #bottom-right-logo{
+    display: none;
+}
+
 /* 768px */
 @media screen and (max-width: 780){
 

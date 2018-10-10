@@ -52,7 +52,7 @@ $(document).ready(function () {
         } else {
             $('#list').empty();
             $('#list').append(`
-            <div class="col-sm-12 col-md-6 center">
+            <div class="col-sm-12 col-md-6 text-center">
             <img src="https://vignette.wikia.nocookie.net/battlefordreamislandfanfiction/images/b/be/Error_Sign_Body_Asset.png/revision/latest?cb=20170426033544" alt="error"><br>
             <h1>Invalid Zip Code!</h1><br>
             <h3>Try Again.</h3>
@@ -170,5 +170,3 @@ function getRandomFact() {
 
     factsTimeout = setInterval(getRandomFact, 5000);    //
 }
-
-
