@@ -149,9 +149,9 @@ function displayResults(response) {
 
         modal.append(`
             <div id="animals" class="col-sm-4 col-md-3">
-                <img src="${img}"  id="petImg" alt="${petName}" target="_blank"><br>
+                <img src="${img}"  id="petImg" alt="${petName}"><br>
                 <div class="container" id="petInfo">
-                <span>Name: <a href="https://www.petfinder.com/petdetail/${id}">${petName}</a></span><br>
+                <span>Name: <a href="https://www.petfinder.com/petdetail/${id}">${petName} target="_blank"</a></span><br>
                 <span>Breed: ${breed}</span><br>
                 <span>Age: ${age}</span>
                 </div>
