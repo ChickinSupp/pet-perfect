@@ -43,6 +43,10 @@ body {
   display: block;
   clear: both; }
 
+  .typewriter{
+    margin-left: 5rem;
+  }
+
 /* CAROUSEL */
 .container-items {
   margin: 7rem auto;
@@ -116,17 +120,14 @@ body {
 .container-dimension{
   width: 40rem;
   float: left;
+  display: none;
 }
 
 .accordion1{
-  margin: 1rem 4.5rem 0 0;
+  margin: 1rem 4.5rem 0 4.5rem;
 }
 
 /* ABOUT US */
-/* .about-border{
-  box-shadow: 2px 2px 5px #888888
-} */
-
 .about-container-border{
   padding: 2rem 0;
   box-shadow: 5px 10px 25px #888888;
@@ -229,6 +230,24 @@ body {
 #google-maps{
   margin: 0 4.8rem 0 10.5rem; 
  }
+}
+
+/* 768px */
+@media screen and (max-width: 780){
+
+  .container-dimension{
+    float: none;
+  }
+
+  .accordion1{
+    margin: 1rem 4.5rem 0 4.5rem;
+  }
+
+  #bottom-right-logo{
+    display: none;
+  }
+
+}
 
  /* 580px */
  @media screen and (max-width:580px){
