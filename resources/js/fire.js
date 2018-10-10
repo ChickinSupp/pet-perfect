@@ -1,7 +1,7 @@
 //_______________________Firebase________________________//
 
 // Initialize Firebase
-var mykey = myStuff.API_KEY;
+let mykey = myStuff.API_KEY;
 let config = {
     apiKey:mykey,
     authDomain: "project-one-1d7a0.firebaseapp.com",

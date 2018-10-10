@@ -2,7 +2,7 @@ body {
   margin-top: 4rem;
   /* Sticky Footer */
   display: flex;
-  min-height: 90vh;
+  min-height: 95vh;
   flex-direction: column;
 }
 
@@ -172,24 +172,25 @@ body {
   /* Sticky Footer */
   .wrapper {
     flex: 1;
+      margin-top: 40px;
   }
-  
+
   #fav {
      display: none;
    }
-  
+
   .review-form {
     display: none;
   }
-  
+
   #app {
     margin-bottom: 50px;
   }
-  
+
   #key {
     font-weight: bold;
   }
-  
+
   #value {
     font-style: italic;
   }
