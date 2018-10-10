@@ -32,7 +32,7 @@ let facts = [
 
 // Define params
 let apiKey = '40902c4189b33d9649efd9725215fcf6';
-let url = 'http://api.petfinder.com/pet.find';
+let url = 'https://api.petfinder.com/pet.find';
 let input, myPet, zip, myOffset;
 let tempBreed = '';
 let computerPick, factsTimeout;
