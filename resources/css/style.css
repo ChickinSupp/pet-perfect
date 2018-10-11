@@ -187,7 +187,7 @@ body {
     margin-bottom: 50px;
   }
 
-  #name {
+  #names {
     font-weight: bold;
   }
 
@@ -234,70 +234,71 @@ body {
 }
 
 /* 990px */
-@media screen and (max-width: 990px){
-  #bottom-right-logo{
-    display: none;
-}
+@media screen and (max-width: 990px) {
+    #bottom-right-logo {
+        display: none;
+    }
 
-/* 768px */
-@media screen and (max-width: 780){
+    /* 768px */
+    @media screen and (max-width: 780) {
 
-  .container-dimension{
-    float: none;
-  }
+        .container-dimension {
+            float: none;
+        }
 
-  .accordion1{
-    margin: 1rem 4.5rem 0 4.5rem;
-  }
+        .accordion1 {
+            margin: 1rem 4.5rem 0 4.5rem;
+        }
 
-  #bottom-right-logo{
-    display: none;
-  }
+        #bottom-right-logo {
+            display: none;
+        }
 
-}
+    }
 
- /* 580px */
- @media screen and (max-width:580px){
+    /* 580px */
+    @media screen and (max-width: 580px) {
 
-  .carousel{ 
-    animation: 0s;
-  }
+        .carousel {
+            animation: 0s;
+        }
 
-  .carousel-inner{
-    height: 20rem;
-  } 
-  
-  .typewriter{
-    position: relative;
-      bottom: 4.5rem;
-  }  
+        .carousel-inner {
+            height: 20rem;
+        }
 
-  .container-items{
-    display: none;
-  }
-  
-  #carouselImgSlides{
-    visibility: visible;
-    position: relative;
-  }
+        .typewriter {
+            position: relative;
+            bottom: 4.5rem;
+        }
 
-  .container-dimension{
-    position:relative;
-    right: 9rem;
- } 
+        .container-items {
+            display: none;
+        }
 
-#google-maps{
-width: 330px;
-height: 270PX;
-display: none;
-}
+        #carouselImgSlides {
+            visibility: visible;
+            position: relative;
+        }
 
-.accordion1{
-  margin: 0;
-}
+        .container-dimension {
+            position: relative;
+            right: 9rem;
+        }
 
-#bottom-right-logo{
-  display: none;
-}
+        #google-maps {
+            width: 330px;
+            height: 270PX;
+            display: none;
+        }
 
+        .accordion1 {
+            margin: 0;
+        }
+
+        #bottom-right-logo {
+            display: none;
+        }
+
+    }
 }

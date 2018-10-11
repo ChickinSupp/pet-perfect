@@ -72,16 +72,6 @@ firebase.auth().onAuthStateChanged(function(user) {
 // Get a reference to the database service
 let reviews = db.collection('reviews');
 
-// Get realtime updates
-reviews.onSnapshot(snapshot => {
-    let changes = snapshot.docChanges();
-    changes.forEach(change => {
-        if (change.type === 'added') {
-            renderReviews(change.doc);
-        }
-    })
-});
-
 function addReview() {
     let comment = $('#comment').val().trim();
     let username = $('#name').val().trim();
@@ -101,16 +91,27 @@ function addReview() {
 }
 
 // Using vue js to render reviews
-var app = new Vue({
+let app = new Vue({
     el: '#app',
     data: {
         reviews: []
     }
 });
 
+// Get realtime updates
+reviews.onSnapshot(snapshot => {
+    let changes = snapshot.docChanges();
+    changes.forEach(change => {
+        if (change.type === 'added') {
+            renderReviews(change.doc);
+        }
+    })
+});
+
 function renderReviews(doc) {
-    let review = doc.data().comment;
     let username = doc.data().username;
+    let review = doc.data().comment;
     app.reviews.push({ name: username, review: review });
 }
+
 
