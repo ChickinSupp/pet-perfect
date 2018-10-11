@@ -13,7 +13,7 @@ Creating a website that allows the user to find pet shops, veterinarians, pet-fr
 
 **APIs to be Used**
 
-Google Maps API, Geolocation API
+Google Maps API, Geolocation API & PetFinder API
 
 **Rough Breakdown of Tasks**
 
