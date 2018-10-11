@@ -79,8 +79,6 @@ $(document).ready(function () {
 
 function getPets() {
     myPet = $('#pets option:selected').text().toLowerCase();
-    console.log(input);
-    console.log(myPet);
 
     $.ajax({
         url: url,
@@ -137,11 +135,9 @@ function displayResults(response) {
             if(Array.isArray(record.breeds.breed)) {                // check to see if the object is an array
                 record.breeds.breed.forEach(function (arrayItem) {
                     tempBreed += (arrayItem.$t + '');               // concatenate the breed names
-                    console.log(tempBreed);
                 });
                 breed = tempBreed.trim();
                 tempBreed = '';
-                console.log('Breed: ' + breed);
             } else {
                 breed = record.breeds.breed.$t;
             }
@@ -163,7 +159,6 @@ function displayResults(response) {
 function getRandomFact() {
     clearInterval(factsTimeout);            // clear the interval from last time
     computerPick = facts[Math.floor(Math.random() * facts.length)];            // select a random fact
-    console.log(computerPick);
     let factDiv = $(".factIs");
     factDiv.empty();
     factDiv.append(`<p>${computerPick}</p>`);       // append the question to the section
