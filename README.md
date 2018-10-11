@@ -10,13 +10,10 @@ Team Members
 
 Creating a website that allows the user to find pet shops, veterinarians, pet-friendly parks around the user. The user will input his/her zip-code in a input field. Once the zip code is submitted, the webpage will use the Google Maps API to generate a map that will show the nearest veterinarians, pet shops, and pet-friendly parks around the user.
 
-**Sketch of Final Product**
-
- ![pet-perfect](resources/images/sketch.jpg)
 
 **APIs to be Used**
 
-Google Maps API, Geolocation API
+Google Maps API, Geolocation API & PetFinder API
 
 **Rough Breakdown of Tasks**
 
