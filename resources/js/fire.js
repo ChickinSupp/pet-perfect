@@ -111,6 +111,6 @@ var app = new Vue({
 function renderReviews(doc) {
     let review = doc.data().comment;
     let username = doc.data().username;
-    app.reviews.push({ key: username, value: review });
+    app.reviews.push({ name: username, review: review });
 }
 
