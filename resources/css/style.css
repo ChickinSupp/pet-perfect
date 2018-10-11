@@ -187,11 +187,11 @@ body {
     margin-bottom: 50px;
   }
 
-  #key {
+  #name {
     font-weight: bold;
   }
 
-  #value {
+  #review {
     font-style: italic;
   }
 
