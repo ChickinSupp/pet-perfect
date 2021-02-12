@@ -31,8 +31,8 @@ let facts = [
 ];
 
 // Define params
-let apiKey = '40902c4189b33d9649efd9725215fcf6';
-let url = 'https://api.petfinder.com/pet.find';
+const apiKey = '40902c4189b33d9649efd9725215fcf6';
+const url = 'https://api.petfinder.com/pet.find';
 let input, myPet, zip, myOffset;
 let tempBreed = '';
 let computerPick, factsTimeout;
@@ -53,7 +53,7 @@ $(document).ready(function () {
             $('#list').empty();
             $('#list').append(`
             <div class="col-sm-12 col-md-6 text-center">
-            <img src="https://vignette.wikia.nocookie.net/battlefordreamislandfanfiction/images/b/be/Error_Sign_Body_Asset.png/revision/latest?cb=20170426033544" alt="error"><br>
+            <img class="img-fluid" src="https://vignette.wikia.nocookie.net/battlefordreamislandfanfiction/images/b/be/Error_Sign_Body_Asset.png/revision/latest?cb=20170426033544" alt="error"><br>
             <h1>Invalid Zip Code!</h1><br>
             <h3>Try Again.</h3>
             </div>`);
@@ -107,6 +107,12 @@ function getPets() {
         error : function(request, error)
         {
             console.log("Request: "+JSON.stringify(request));
+            $('#list').empty();
+            $('#list').append(`
+                <div class="col-sm-12 col-md-6 text-center">
+                <p>An Error has occurred. :(</p><br>
+                <p>Try Again.</p>
+                </div>`);
         }
     });
 
