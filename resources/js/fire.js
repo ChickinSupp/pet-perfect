@@ -8,7 +8,8 @@ let config = {
     databaseURL: "https://project-one-1d7a0.firebaseio.com",
     projectId: "project-one-1d7a0",
     storageBucket: "project-one-1d7a0.appspot.com",
-    messagingSenderId: "483583667725"
+    messagingSenderId: "483583667725",
+    appId: "1:483583667725:web:b0515ae234d9b87855af44"
 };
 firebase.initializeApp(config);
 let db = firebase.firestore();
@@ -77,16 +78,15 @@ function addReview() {
     let username = $('#name').val().trim();
 
     if ((comment !== '') && (username !== '')) {
-        reviews.doc().set({
+        reviews.add({
             username: username,
             comment: comment
         }).then(function() {
             console.log("Document successfully written!");
             $("#myForm")[0].reset();
-        })
-            .catch(function(error) {
-                console.error("Error writing document: ", error);
-            });
+        }).catch(function(error) {
+            console.error("Error writing document: ", error);
+        });
     }
 }
 
